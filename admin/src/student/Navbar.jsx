@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Navbar = () => {
   return (
     <>
       <nav className={"navbar navbar-expand-lg bg-body-tertiary"}>
         <div className={"container-fluid"}>
-          <Link to="/" className={"navbar-brand ms-5 "}>
-            
-          </Link>
+          <Link to="/" className={"navbar-brand ms-5 "}></Link>
           <button
             className={"navbar-toggler"}
             type="button"
@@ -28,13 +24,17 @@ const Navbar = () => {
           >
             <ul className={"navbar-nav me-auto mb-2 mb-lg-0"}>
               <li className={"nav-item"}>
+                <Link to="/" className={"nav-link active"} aria-current="page">
+                  <button className={"btn btn-light me-3"}> Home</button>
+                </Link>
+              </li>
+              <li className={"nav-item"}>
                 <Link
                   to="/create"
                   className={"nav-link active"}
                   aria-current="page"
                 >
-                   <button className={"btn btn-light me-3"}> Create</button>
-              
+                  <button className={"btn btn-light me-3"}> Create</button>
                 </Link>
               </li>
               <li className={"nav-item"}>
@@ -43,15 +43,10 @@ const Navbar = () => {
                   className={"nav-link active "}
                   aria-current="page"
                 >
-              
-                   <button className={"btn btn-light me-2"}> Dashboard</button>
+                  <button className={"btn btn-light me-2"}> Dashboard</button>
                 </Link>
               </li>
-              </ul>
-             
-      
-
-            
+            </ul>
           </div>
         </div>
       </nav>
